@@ -1,0 +1,74 @@
+/* Styl głównego kontenera nagłówka */
+.header {
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(
+		0deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(47, 218, 210, 1) 0%,
+		rgba(0, 212, 255, 1) 99%
+	);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	max-height: 100px;
+}
+
+/* Styl dla górnej sekcji nagłówka, zawierającej logo i pasek nawigacyjny */
+.header-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px; /* Odstęp między górną a dolną sekcją */
+}
+
+/* Styl dla kontenera logo */
+.header-top_logo {
+	display: flex; /* Umożliwia kontrolę rozmiaru obrazu logo */
+	justify-content: center; /* Wyśrodkowanie logo */
+	align-items: center; /* Wyśrodkowanie w pionie */
+}
+
+/* Styl dla obrazu logo */
+.header-top_logo img {
+	max-width: 200px; /* Maksymalna szerokość logo */
+	max-height: 100px; /* Maksymalna wysokość logo */
+	flex-shrink: 0; /* Zapobieganie zmniejszaniu logo */
+}
+
+/* Styl dla paska nawigacyjnego */
+.header-top_navbar {
+	display: flex;
+}
+
+/* Styl dla linku logo */
+.header-logo {
+	text-decoration: none;
+	color: #333; /* Ciemnoszary dla kontrastu */
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* Dostosowania dla responsywności */
+@media (max-width: 768px) {
+	.header-top {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.header-top_logo,
+	.header-top_navbar {
+		width: 100%;
+		justify-content: center;
+		margin-bottom: 10px;
+	}
+
+	/* W przypadku dodatkowych elementów w dolnej części nagłówka */
+	.header-bottom {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.header-bottom_phone,
+	.header-bottom_email {
+		margin-bottom: 10px;
+	}
+}

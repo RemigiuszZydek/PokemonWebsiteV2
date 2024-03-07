@@ -1,9 +1,10 @@
 import "./App.css";
+import Header from "./components/common/header";
 
 function App() {
 	return (
 		<div className="App">
-			<header className="App-header">Tutaj bedzie cos</header>
+			<Header />
 		</div>
 	);
 }
